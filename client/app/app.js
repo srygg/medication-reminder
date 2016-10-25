@@ -5,7 +5,12 @@ angular.module('medicationReminderApp', [
   'ngResource',
   'ngSanitize',
   'ui.router',
-  'ui.bootstrap'
+  'ui.bootstrap',
+  'mwl.calendar',
+  'ngMdIcons',
+  'ngAnimate',
+  'ngAudio',
+  'ui.bootstrap.datepicker',
 ])
   .config(function ($stateProvider, $urlRouterProvider, $locationProvider) {
     $urlRouterProvider

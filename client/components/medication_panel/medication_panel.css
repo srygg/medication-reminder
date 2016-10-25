@@ -1,0 +1,26 @@
+h3 {
+	text-align: center;
+	vertical-align: middle;
+}
+
+.btn.btn-warning {
+	width: 100%;
+}
+
+.notify {
+	background: #fff;
+  	animation: color-me-in 1s infinite;
+}
+
+@keyframes color-me-in {
+  0% {
+    background: red;
+  }
+  100% {
+    background: #fff;
+  }
+}
+
+.ng-binding {
+	font-size: 25px;
+}

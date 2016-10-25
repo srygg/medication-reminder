@@ -1,0 +1,28 @@
+<br>
+	<div class="panel" ng-class="{'panel-success': m.completed, 'panel-danger': !m.completed && !checkDate(m.time), 'panel-primary': !m.completed && checkDate(m.time),
+	'notify':!m.completed && checkTime(m.time)}">
+	  	<div class="panel-body">
+	  		<div class="col-lg-6">
+	  			<div ng-if="m.completed">
+	  				<ng-md-icon icon="done" style="fill: lightgreen" size="64"></ng-md-icon>
+	  			</div>
+	  			<div ng-if="!m.completed && !checkDate(m.time)">
+	  				<ng-md-icon icon="error_outline" style="fill: red" size="64"></ng-md-icon>
+	  			</div>
+	  			<div ng-if="!m.completed && checkDate(m.time)">
+	  				<ng-md-icon icon="schedule" style="fill: lightblue" size="64"></ng-md-icon>
+	  			</div>
+	  		</div>
+			<div class="col-lg-6">
+				<h4>{{m.time | date:'medium'}} </h4>
+				<h4>{{m.name}}</h4>
+				<h4>{{m.dosage}}</h4>
+			</div>
+	  	</div>
+	  	<div ng-if="!m.completed && (checkTime(m.time)||!checkDate(m.time))">
+	  		<button class="btn btn-warning" ng-click="update_complete(m._id)">Complete</button>
+		</div>
+		<div ng-if="!m.completed && checkTime(m.time)" ng-controller="playsounds">
+		</div>
+	</div>
+<br>
