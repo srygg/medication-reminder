@@ -6,7 +6,6 @@ angular.module('medicationReminderApp', [
   'ngSanitize',
   'ui.router',
   'ui.bootstrap',
-  'mwl.calendar',
   'ngMdIcons',
   'ngAnimate',
   'ngAudio',
