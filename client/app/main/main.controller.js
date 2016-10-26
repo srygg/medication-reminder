@@ -48,7 +48,10 @@ angular.module('medicationReminderApp').controller('MainCtrl', function ($rootSc
         
     //update compelte time and status
     $scope.update_complete = function(id){
-        $rootScope.audio.stop();
+        if($rootScope.audio){
+            $rootScope.audio.stop();
+        }
+        
         $http({
             method:"PUT",
             url:"/api/medications/"+id,
